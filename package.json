@@ -8,19 +8,67 @@
   "author": "Caihuanyu <eterlf41@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "remax build -w -t",
+    "dev:alipay": "remax build -w -t alipay",
+    "dev:wechat": "remax build -w -t wechat",
+    "dev:toutiao": "remax build -w -t toutiao",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=production remax build -t"
+    "build:alipay": "NODE_ENV=production remax build -t alipay",
+    "build:wechat": "NODE_ENV=production remax build -t wechat",
+    "build:toutiao": "NODE_ENV=production remax build -t toutiao"
   },
   "dependencies": {
-    "@types/react": "^16.9.1",
     "react": "^16.8.6",
-    "remax": "^1.1.0",
-    "remax-cli": "^1.1.0",
-    "rimraf": "^2.6.3"
+    "remax": "^1.4.2",
+    "remax-cli": "^1.4.2",
+    "rimraf": "^3.0.0"
   },
   "devDependencies": {
-    "chokidar": "^2.1.8"
+    "@types/react": "^16.9.11",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "chokidar": "^2.1.8",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "typescript": "^3.7.2"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": [
+        "./tsconfig.json"
+      ]
+    },
+    "plugins": [
+      "react-hooks"
+    ],
+    "extends": [
+      "standard",
+      "standard-react",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/no-explicit-any": 0,
+      "import/no-unresolved": [
+        2,
+        {
+          "ignore": [
+            "@"
+          ]
+        }
+      ],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   }
 }

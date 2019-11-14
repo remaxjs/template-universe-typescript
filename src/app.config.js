@@ -1,6 +1,6 @@
-const pages = ['pages/index/index'];
-const title = 'Remax Universe Template';
-const backgroundColor = '#282c34';
+const pages = ['pages/index/index']
+const title = 'Remax Universe Template'
+const backgroundColor = '#282c34'
 
 exports.wechat = {
   pages,
@@ -8,7 +8,7 @@ exports.wechat = {
     navigationBarTitleText: title,
     navigationBarBackgroundColor: backgroundColor
   }
-};
+}
 
 exports.alipay = {
   pages,
@@ -16,4 +16,4 @@ exports.alipay = {
     defaultTitle: title,
     titleBarColor: backgroundColor
   }
-};
+}
