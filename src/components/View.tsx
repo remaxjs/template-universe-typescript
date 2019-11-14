@@ -1,17 +1,17 @@
-import * as React from 'react';
-import { View as AlipayView } from 'remax/alipay';
-import { View as WechatView } from 'remax/wechat';
-import { Platform } from 'remax';
+import * as React from 'react'
+import { View as AlipayView } from 'remax/alipay'
+import { View as WechatView } from 'remax/wechat'
+import { Platform } from 'remax'
 
 // 自定义 Props
 type Props = any;
 
-export default function Image(props: Props) {
+export default function Image (props: Props): JSX.Element {
   switch (Platform.current) {
     case 'alipay':
-      return <AlipayView {...props} />;
+      return <AlipayView {...props} />
     case 'wechat':
     default:
-      return <WechatView {...props} />;
+      return <WechatView {...props} />
   }
 }
