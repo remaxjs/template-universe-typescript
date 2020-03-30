@@ -28,7 +28,8 @@ $ npm run dev
 ## 发布
 
 ```bash
-$ npm run build
+# target 为对应的平台
+$ npm run build -- [target]
 ```
 
 使用支付宝小程序开发者工具上传版本。
