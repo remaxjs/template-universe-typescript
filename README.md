@@ -1,5 +1,7 @@
 # Remax Alipay Template TypeScript
 
+# 已废弃，请参考 https://remaxjs.org/one/intro
+
 使用 Remax 开发支付宝小程序的模板。
 
 通过该模板创建一个新项目：
